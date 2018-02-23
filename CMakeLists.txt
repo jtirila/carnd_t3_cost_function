@@ -1,4 +1,4 @@
-project(carnd_naive_bayes)
+project(carnd_cost)
 
 cmake_minimum_required (VERSION 3.5)
 
@@ -9,7 +9,7 @@ add_definitions(-std=c++11 -O3)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS "${CXX_FLAGS}")
 
-set(sources main.cpp classifier.cpp)
+set(sources main.cpp cost.cpp)
 
 include_directories(/usr/local/include)
 link_directories(/usr/local/lib)
@@ -22,7 +22,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
-add_executable(naive_bayes ${sources})
+add_executable(cost ${sources})
 
-target_link_libraries(naive_bayes ipopt z ssl uv uWS)
+target_link_libraries(cost ipopt z ssl uv uWS)
 
