@@ -15,6 +15,9 @@ float goal_distance_cost(int goal_lane, int intended_lane, int final_lane, float
 
   //TODO: Replace cost = 0 with an appropriate cost function.
   float cost = 0;
+  int d_total = abs(goal_lane - intended_lane) + abs(final_lane - goal_lane);
+  cost = 1 - exp(-d_total / distance_to_goal);
+
 
   return cost;
 }
