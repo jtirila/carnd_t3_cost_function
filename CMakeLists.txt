@@ -1,4 +1,4 @@
-project(carnd_cost)
+project(cost)
 
 cmake_minimum_required (VERSION 3.5)
 
@@ -24,5 +24,5 @@ endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 add_executable(cost ${sources})
 
-target_link_libraries(cost ipopt z ssl uv uWS)
+target_link_libraries(cost)
 
